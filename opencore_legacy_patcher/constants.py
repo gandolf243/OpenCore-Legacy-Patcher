@@ -762,6 +762,24 @@ class Constants:
         return Path(self.launcher_binary).parent.parent / Path("Resources")
 
 
+        @property
+    def patch_icon_path(self):
+        if self.detected_os == os_data.os_data.big_sur:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-11.icns")
+        elif self.detected_os == os_data.os_data.monterey:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-12.icns")
+        elif self.detected_os == os_data.os_data.ventura:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-13.icns")
+        elif self.detected_os == os_data.os_data.sonoma:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-14.icns")
+        elif self.detected_os == os_data.os_data.sequoia:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-15.icns")
+        elif self.detected_os == os_data.os_data.tahoe:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-26.icns")
+        else:
+            return self.payload_path / Path("Icon/AppIcons/OC-Patch-11.icns")
+
+
     @property
     def app_icon_path(self):
         return self.payload_path / Path("Icon/AppIcons/OC-Patcher.icns")
