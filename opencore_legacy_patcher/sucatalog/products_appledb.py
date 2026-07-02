@@ -62,7 +62,7 @@ class AppleDBProducts:
         """
 
         supported_versions = {
-            os_data(i): [v for v in products if v["InstallAssistant"]["XNUMajor"] == i] for i in range(self.max_ia - 3, self.max_ia + 1)
+            os_data(i): [v for v in products if v["InstallAssistant"]["XNUMajor"] == i] for i in range(self.max_ia - 4, self.max_ia + 1)
         }
 
         for versions in supported_versions.values():
