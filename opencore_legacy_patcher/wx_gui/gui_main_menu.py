@@ -123,7 +123,7 @@ class MainFrame(wx.Frame):
                     "patches for your system after",
                     "installing a new version of macOS.",
                 ],
-                "icon": str(self.constants.icns_resource_path / "OC-Patch.icns"),
+                "icon": str(self.constants.patch_icon_path),
             },
 
             "Support": {
