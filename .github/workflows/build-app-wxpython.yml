@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build wxPython
-    runs-on: x86_64_monterey
+    runs-on: self-hosted
 
     env:
       # GitHub Information
